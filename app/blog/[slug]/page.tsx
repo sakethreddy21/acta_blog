@@ -15,7 +15,13 @@ function getBlogBySlug(slug: string) {
 }
 
 // Make the page component async
-const Page = async ({ params }: { params: { slug: string } }) => {
+const Page = async ({
+  params,
+}: {
+  params: {
+    slug: string;
+  };
+}) => {
   const blog = getBlogBySlug(params.slug);
 
   // Format the date
